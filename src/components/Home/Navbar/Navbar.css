@@ -1,0 +1,12 @@
+.btn-brand{
+    background: #111430;
+    border: 0px;
+    border-radius: 5px;
+    color: white !important;
+    padding: 10px 20px !important;
+    font-weight: 500;
+}
+.navbar-nav li a{
+    color: #474747;
+    padding: 10px 20px !important;
+}
