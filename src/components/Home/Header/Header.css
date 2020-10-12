@@ -1,0 +1,23 @@
+.home-wrapper{
+    height: 100vh;
+    background: #FBD062;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 0% 100%);
+    padding-top: 95px;
+}
+.home-inner{
+    padding-top: 80px;
+}
+.home-inner h1{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.01em;
+    color: #111430;
+}
+.home-inner p{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    margin-bottom: 30px;
+}
