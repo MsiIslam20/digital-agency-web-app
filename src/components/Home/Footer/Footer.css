@@ -1,0 +1,16 @@
+.footer-wrapper{
+    background: #FBD062;
+    padding-top: 65px;
+}
+.f-detail h4{
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 43px;
+    letter-spacing: 0.396px;
+    color: #2D2D2D;
+    margin-bottom: 30px;
+}
+.footer-form .form-control{
+    padding: 28px 15px;
+    border: 0px;
+}
