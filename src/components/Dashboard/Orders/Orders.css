@@ -1,0 +1,40 @@
+.order-wrapper{
+    background: #F4F7FC;
+    min-height: 100vh;
+}
+.hidden{
+    overflow: hidden;
+}
+.order-sidebar{
+    padding: 15px 35px;
+    background: #fff;
+    min-height: 100vh;
+}
+.order-sidebar ul {
+    margin-top: 50px;
+}
+.order-sidebar ul li{
+    margin-bottom: 13px;
+}
+
+.order-details ul{
+    background: #fff;
+    padding: 20px 30px 20px 30px;
+}
+.order-details ul li{
+    display: inline-block;
+}
+.order-form{
+    padding-left: 30px;
+    margin-top: 50px;
+}
+.order-form .form-control{
+    padding: 26px 15px;
+    margin-top: 15px;
+}
+.order-form span{
+    color: red;
+}
+.register-btn{
+    margin-top: 30px;
+}
