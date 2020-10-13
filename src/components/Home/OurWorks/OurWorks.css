@@ -1,3 +1,19 @@
 .works-wrapper{
     background: #111430;
 }
+.carousel-inner div{
+    margin: 0px 5px;
+}
+.react-multiple-carousel__arrow{
+    display: none;
+}
+.react-multi-carousel-dot button{
+    width: 16px !important;
+    height: 16px !important;
+}
+.react-multi-carousel-dot--active button {
+    background: #FBD062 !important;
+}
+.react-multi-carousel-list {
+    padding: 50px 0px;
+}
