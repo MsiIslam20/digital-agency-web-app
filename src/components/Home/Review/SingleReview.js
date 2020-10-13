@@ -11,6 +11,7 @@ const SingleReview = ({review}) => {
                         <h6>{review.address}</h6>
                     </div>
                 </div>
+                <p>{review.description}</p>
             </div>
         </div>
     );

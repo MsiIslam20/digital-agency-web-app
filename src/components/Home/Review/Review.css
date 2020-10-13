@@ -1,3 +1,29 @@
 .review-inner img{
     height: 60px;
 }
+.more{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.more h5{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+.more h6{
+    font-size: 16px;
+    line-height: 24px;
+}
+.review-inner{
+    border: 1px solid #BFBFBF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 20px 5px 0px 20px;
+}
+.review-inner p{
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.005em;
+    color: #707070;
+    margin-top: 15px;
+}
