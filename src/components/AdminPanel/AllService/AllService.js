@@ -1,9 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
+import ServiceDataTable from './ServiceDataTable';
+import './AllService.css'
 
 const AllService = () => {
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
+    const [allOrders, setAllOrders] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:4000/allOrders')
+            .then(res => res.json())
+            .then(data => setAllOrders(data))
+    }, [])
+
     return (
         <section className="order-wrapper hidden">
            <div className="container-fluid">
@@ -18,7 +28,7 @@ const AllService = () => {
                                        <li>{loggedInUser.name}</li>
                                    </ul>
                                    <div className="order-form">
-
+                                       <ServiceDataTable allOrders={allOrders}></ServiceDataTable>
                                    </div>
                                </div>
                            </div>

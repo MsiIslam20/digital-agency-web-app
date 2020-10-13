@@ -1,0 +1,10 @@
+.table-borderless thead tr{
+    background: #FFF;
+    border-radius: 13px;
+}
+.table-borderless thead tr th{
+    font-weight: 500;
+}
+.table{
+    background: #fff !important;
+}
