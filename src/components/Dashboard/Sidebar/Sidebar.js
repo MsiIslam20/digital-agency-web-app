@@ -21,6 +21,15 @@ const Sidebar = () => {
                     <li>
                         <Link to="/reviews">Review</Link>
                     </li>
+                    <li>
+                        <Link to="/allService">Service list</Link>
+                    </li>
+                    <li>
+                        <Link to="/addService">Add Service</Link>
+                    </li> 
+                    <li>
+                        <Link to="/makeAdmin">Make Admin</Link>
+                    </li>                                         
                 </ul>
             </div>
         </div>
