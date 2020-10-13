@@ -3,3 +3,24 @@
     border-radius: 20px;
     padding: 25px;
 }
+.list-inner img{
+    height: 74px;
+}
+
+.list-inner h4{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: 0.396px;
+    color: #111430;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.status strong{
+    padding: 5px 12px;
+    background: #FFE3E3;
+    color: #FF4545;
+    font-weight: 600;
+    border-radius: 8px;
+}

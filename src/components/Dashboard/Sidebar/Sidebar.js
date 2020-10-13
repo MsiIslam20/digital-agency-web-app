@@ -12,9 +12,9 @@ const Sidebar = () => {
                     </Link>
                 </div>
                 <ul className="list-unstyled">
-                    <li>
+                    {/* <li>
                         <Link to="/orders">Order</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="/serviceList">Service list</Link>
                     </li>

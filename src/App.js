@@ -10,6 +10,7 @@ import Login from './components/Login/Login';
 import Orders from './components/Dashboard/Orders/Orders';
 import ServiceList from './components/Dashboard/serviceList/serviceList';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Reviews from './components/Dashboard/Reviews/Reviews';
 
 export const UserContext = createContext();
 
@@ -32,7 +33,7 @@ function App() {
             <ServiceList />
           </Route>
           <Route path="/reviews">
-            <Orders />
+            <Reviews />
           </Route>                    
         </Switch>
       </Router>

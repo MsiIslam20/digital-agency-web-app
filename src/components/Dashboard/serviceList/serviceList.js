@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import './ServiceList.css'
+import SingleServiceList from './SingleServiceList';
 
 const ServiceList = () => {
+
+    const [loggedInUser , setLoggedInUser] = useContext(UserContext);
+
+    const [orders, setOrders] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:4000/serviceList?email=${loggedInUser.email}`)
+        .then(res => res.json())
+        .then(data => {
+            setOrders(data)
+        })
+    }, [])
+
+    console.log(orders);
+
     return (
         <section className="order-wrapper hidden">
            <div className="container-fluid">
@@ -21,11 +38,9 @@ const ServiceList = () => {
                                            <div className="col-md-10">
                                                <div className="service-list">
                                                    <div className="row">
-                                                       <div className="col-md-6">
-                                                           <div className="list-inner">
-
-                                                           </div>
-                                                       </div>
+                                                       {
+                                                           orders.map(order => <SingleServiceList order={order} key={order._id}></SingleServiceList>)
+                                                       }
                                                    </div>
                                                </div>
                                            </div>

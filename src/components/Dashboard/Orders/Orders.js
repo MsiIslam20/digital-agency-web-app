@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import './Orders.css'
@@ -22,8 +22,26 @@ const Orders = () => {
 
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
+    const history = useHistory();
+
     const onSubmit = userData => {
-        console.log(userData);
+
+        const {img} = {...service}
+        const orderDetail = {img , ...userData};
+
+        fetch("http://localhost:4000/addOrder", { 
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderDetail)
+          })
+          .then(res => res.json())
+          .then(data =>{
+            if(data){
+                history.push("/serviceList")
+            }
+        })
     }
 
     return (
