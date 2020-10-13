@@ -1,9 +1,10 @@
 .review-inner img{
     height: 60px;
+    border-radius: 50%;
 }
 .more{
     margin-left: 15px;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 .more h5{
     font-size: 20px;
@@ -19,6 +20,7 @@
     box-sizing: border-box;
     border-radius: 4px;
     padding: 20px 5px 0px 20px;
+    margin-bottom: 30px;
 }
 .review-inner p{
     font-size: 14px;
