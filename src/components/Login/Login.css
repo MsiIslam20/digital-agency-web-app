@@ -1,0 +1,29 @@
+.logIn h3{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.logIn{
+    padding: 130px 80px;
+    background: #FFFFFF;
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.logIn h6{
+    font-weight: 400;
+    text-align:center;
+}
+.login-opt{
+    padding: 10px 30px;
+    border: 1px solid #ABABAB;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.login-opt img {
+    margin-right: 100px;
+}
+.register-inner h6 span{
+    color: #3F90FC;
+    cursor: pointer;
+}

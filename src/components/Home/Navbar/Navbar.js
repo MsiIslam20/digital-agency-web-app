@@ -7,7 +7,7 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <>
-                       <nav className="navbar navbar-expand-lg fixed-top">
+            <nav className="navbar navbar-expand-lg fixed-top">
                 <div className="container">
                     <Link to="/" className="navbar-brand">
                         <img src={logo} alt="" className="img-fluid"/>
@@ -30,7 +30,7 @@ const Navbar = () => {
                                 <a className="nav-link" href="#0">Contact Us</a>
                             </li>      
                             <li className="nav-item">
-                                <a className="nav-link btn btn-primary btn-brand" href="#0">Login</a>
+                                <Link to="/login" className="nav-link btn btn-primary btn-brand">Login</Link>
                             </li> 
                         </ul>
                     </div>
