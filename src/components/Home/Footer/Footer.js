@@ -15,16 +15,16 @@ const Footer = () => {
                     <div className="col-md-6">
                         <div className="footer-form">
                             <form>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="validationDefault03" placeholder="Your email address" required />
+                                <div className="form-group">
+                                    <input type="email" className="form-control" name="email" id="validationDefault03" placeholder="Your email address" required />
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="name" id="validationDefault02" placeholder="Your name / company’s name" required />
+                                <div className="form-group">
+                                    <input type="text" className="form-control" name="name" id="validationDefault02" placeholder="Your name / company’s name" required />
                                 </div>     
-                                <div class="form-group">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Your message" rows="6" required></textarea>
+                                <div className="form-group">
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Your message" rows="6" required></textarea>
                                 </div>                           
-                                <button class="btn btn-primary btn-brand mb-5" type="submit">Send</button>
+                                <button className="btn btn-primary btn-brand mb-5" type="submit">Send</button>
                             </form>
                         </div>
                     </div>

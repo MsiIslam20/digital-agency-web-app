@@ -1,32 +1,20 @@
-import React from 'react';
-import service1 from '../../../images/service1.png';
-import service2 from '../../../images/service2.png';
-import service3 from '../../../images/service3.png';
+import React, { useEffect } from 'react';
 import SingleService from './SingleService';
 import './Services.css'
+import { useState } from 'react';
 
-const serviceData = [
-    {
-        title: 'Web & Mobile design',
-        description: 'We craft stunning and amazing web UI, using a well drrafted UX to fit your product.',
-        img: service1,
-        key: 1,
-    },
-    {
-        title: 'Graphic design',
-        description: 'Amazing flyers, social media posts and brand representations that would make your brand stand out.',
-        img: service2,
-        key: 2
-    },
-    {
-        title: 'Web development',
-        description: 'With well written codes, we build amazing apps for all platforms, mobile and web apps in general.',
-        img: service3,
-        key: 3
-    }
-]
 
 const Services = () => {
+
+    const [services , setServices] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:4000/services")
+        .then(res => res.json())
+        .then(data => {
+            setServices(data)
+        })
+    }, [])
+
     return (
         <section className="services-wrapper">
             <div className="container">
@@ -36,7 +24,7 @@ const Services = () => {
                         <div className="service-inner">
                             <div className="row">
                                 {
-                                    serviceData.map(service => <SingleService service={service} key={service.key}></SingleService>)
+                                    services.map(service => <SingleService service={service} key={service.key}></SingleService>)
                                 }
                             </div>
                         </div>
