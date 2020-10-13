@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Route exact path="/">
           <HeaderMain />
         </Route>
+        <Route path="/login">
+          <Login />
+        </Route>        
       </Switch>
     </Router>
   );
