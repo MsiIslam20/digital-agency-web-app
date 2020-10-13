@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Login from './components/Login/Login';
 import Orders from './components/Dashboard/Orders/Orders';
+import ServiceList from './components/Dashboard/serviceList/serviceList';
 
 export const UserContext = createContext();
 
@@ -26,8 +27,8 @@ function App() {
           <Route path="/orders">
             <Orders />
           </Route>    
-          <Route path="/services">
-            <Orders />
+          <Route path="/serviceList">
+            <ServiceList />
           </Route>
           <Route path="/reviews">
             <Orders />
