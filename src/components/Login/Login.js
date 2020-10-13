@@ -1,16 +1,40 @@
 import React, { useContext } from 'react';
 import logo from '../../images/logo.svg';
 import google from '../../images/google.svg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from './firebase.config';
 import './Login.css'
 
 const Login = () => {
 
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
 
-    const handleGoogleSignIn = () => {
+    if(firebase.apps.length === 0) {
+        firebase.initializeApp(firebaseConfig);
+    }
 
+    const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/" } };
+
+    const handleGoogleSignIn = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth().signInWithPopup(provider)
+        .then(function(result) {
+            const {displayName, email} = result.user;
+            const signInUser = {name: displayName, email}
+            setLoggedInUser(signInUser);
+            history.replace(from);
+        })
+        .catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+        });
     }
 
     return (

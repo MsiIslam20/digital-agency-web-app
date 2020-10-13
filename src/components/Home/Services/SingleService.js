@@ -1,13 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleService = ({service}) => {
     return (
         <div className="col-md-4">
-            <div className="service-details text-center">
-                <img src={service.img} alt="" className="img-fluid"/>
-                <h4>{service.title}</h4>
-                <p>{service.description}</p>
-            </div>
+            <Link to="/orders">
+                <div className="service-details text-center">
+                    <img src={service.img} alt="" className="img-fluid"/>
+                    <h4>{service.title}</h4>
+                    <p>{service.description}</p>
+                </div>
+            </Link>
         </div>
     );
 };

@@ -1,10 +1,12 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import './Orders.css'
 
 const Orders = () => {
-    
+    const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = userData => {
 
@@ -21,7 +23,7 @@ const Orders = () => {
                                <div className="order-details">
                                    <ul className="list-unstyled d-flex justify-content-between">
                                        <li>Order</li>
-                                       <li>Saidul</li>
+                                       <li>{loggedInUser.name}</li>
                                    </ul>
                                    <div className="order-form">
                                        <div className="row">

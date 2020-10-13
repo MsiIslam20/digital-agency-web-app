@@ -7,7 +7,9 @@ const Sidebar = () => {
         <div className="col-md-3 pr-0">
             <div className="order-sidebar">
                 <div className="logo">
-                    <img src={logo} alt="" className="img-fluid" />
+                    <Link to="/">
+                        <img src={logo} alt="" className="img-fluid" />
+                    </Link>
                 </div>
                 <ul className="list-unstyled">
                     <li>
