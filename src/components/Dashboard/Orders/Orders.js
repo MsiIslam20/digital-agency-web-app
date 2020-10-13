@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 import './Orders.css'
 
 const Orders = () => {
+
+    const {id} = useParams();
+    const [service, setService] = useState({});
+
+    useEffect(() => {
+        fetch("http://localhost:4000/orders/"+ id)
+        .then(res => res.json())
+        .then(data => {
+            setService(data);
+        })
+    }, [id])
+
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = userData => {
-
+        console.log(userData);
     }
 
     return (
@@ -29,13 +43,13 @@ const Orders = () => {
                                        <div className="row">
                                            <div className="col-md-7">
                                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                                    <input className="form-control" type="text" name="name"  placeholder="Your name / company’s name" ref={register({ required: true })} />
+                                                    <input className="form-control" type="text" name="name" defaultValue={loggedInUser.name}  placeholder="Your name / company’s name" ref={register({ required: true })} />
                                                     {errors.name && <span>Name or Company name is required</span>}
-                                                    <input className="form-control" placeholder="Your email address" type="email" name="email" ref={register({ required: true })} />
+                                                    <input className="form-control" placeholder="Your email address" type="email" defaultValue={loggedInUser.email} name="email" ref={register({ required: true })} />
                                                     {errors.email && <span>Email is required</span>}
-                                                    <input className="form-control" placeholder="Description" type="text" name="projectName" ref={register({ required: true })} />
+                                                    <input className="form-control" placeholder="Description" type="text" name="projectName" defaultValue={service.title} ref={register({ required: true })} />
                                                     {errors.projectName && <span>project Name is required</span>} 
-                                                    <textarea rows="3" className="form-control" placeholder="Project Details" type="text" name="description" ref={register({ required: true })} />
+                                                    <textarea rows="3" className="form-control" placeholder="Project Details" type="text" name="description" defaultValue={service.description} ref={register({ required: true })} />
                                                     {errors.description && <span>Description is required</span>}                                             
                                                     <div className="row">
                                                         <div className="col-md-6">
