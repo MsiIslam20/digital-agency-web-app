@@ -24,7 +24,7 @@ const Reviews = () => {
           .then(data =>{
             if(data){
                 // history.push("/serviceList")
-                alert(data)
+                alert("Review Added Successfully!!!!!")
             }
         })
     }
