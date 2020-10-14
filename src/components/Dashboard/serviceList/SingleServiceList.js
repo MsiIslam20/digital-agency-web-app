@@ -7,7 +7,7 @@ const SingleServiceList = ({order}) => {
                 <div className="d-flex justify-content-between">
                     <img src={`http://localhost:4000/${order.img}`} alt="" className="img-fluid"/>
                     <div className="status">
-                        <strong>Pending</strong>
+                        <strong>{order.status}</strong>
                     </div>
                 </div>
                 <h4>{order.projectName}</h4>

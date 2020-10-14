@@ -8,3 +8,7 @@
 .table{
     background: #fff !important;
 }
+
+select{
+    border: 0px;
+}
