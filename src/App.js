@@ -32,21 +32,21 @@ function App() {
           <PrivateRoute path="/orders/:id">
             <Orders />
           </PrivateRoute>    
-          <Route path="/serviceList">
+          <PrivateRoute path="/serviceList">
             <ServiceList />
-          </Route>
-          <Route path="/reviews">
+          </PrivateRoute>
+          <PrivateRoute path="/reviews">
             <Reviews />
-          </Route>  
-          <Route path="/allService">
+          </PrivateRoute>  
+          <PrivateRoute path="/allService">
             <AllService />
-          </Route>  
-          <Route path="/addService">
+          </PrivateRoute>  
+          <PrivateRoute path="/addService">
             <AddService />
-          </Route>  
-          <Route path="/makeAdmin">
+          </PrivateRoute>  
+          <PrivateRoute path="/makeAdmin">
             <MakeAdmin />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

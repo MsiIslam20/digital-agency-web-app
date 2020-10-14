@@ -31,7 +31,7 @@ const ServiceList = () => {
                                <div className="order-details">
                                    <ul className="list-unstyled d-flex justify-content-between">
                                        <li>Order</li>
-                                       <li>Saidul</li>
+                                       <li>{loggedInUser.name}</li>
                                    </ul>
                                    <div className="order-form">
                                        <div className="row">
