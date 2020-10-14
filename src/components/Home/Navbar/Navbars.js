@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { UserContext } from '../../../App';
 import logo from '../../../images/logo.svg';
-import './Navbar.css'
+import './Navbar.css';
+import {Navbar, Nav, Container} from 'react-bootstrap';
 
-const Navbar = () => {
+const Navbars = () => {
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
 
     const [isDoctor, setIsDoctor] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg fixed-top">
+            {/* <nav className="navbar navbar-expand-lg fixed-top">
                 <div className="container">
                     <Link to="/" className="navbar-brand">
                         <img src={logo} alt="" className="img-fluid"/>
@@ -56,9 +57,32 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-            </nav> 
+            </nav>  */}
+            <Navbar fixed="top" expand="lg">
+                <Container>
+                    <Navbar.Brand>
+                        <Link to="/" className="navbar-brand">
+                            <img src={logo} alt="" className="img-fluid"/>
+                        </Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ml-auto">
+                            <Nav.Link to="/">Home</Nav.Link>
+                            <Nav.Link href="#portfolio">Our Portfolio</Nav.Link>
+                            <Nav.Link href="#review">Our Team</Nav.Link>
+                            {
+                                isDoctor ? <Link className="btn btn-primary btn-brand" to="/allService">Admin Panel</Link> : <Nav.Link href="#contact">Contact Us</Nav.Link>
+                            }
+                            {
+                                loggedInUser.name ? <Nav.Link href="#0" className="users">{loggedInUser.name}</Nav.Link> : <Link className="btn btn-primary btn-brand" to="/login">Login</Link>
+                            }
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>            
         </>
     );
 };
 
-export default Navbar;
+export default Navbars;
