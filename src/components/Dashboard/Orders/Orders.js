@@ -26,8 +26,9 @@ const Orders = () => {
 
     const onSubmit = userData => {
 
+        const status = "pending"
         const {img} = {...service}
-        const orderDetail = {img , ...userData};
+        const orderDetail = {img , ...userData, status};
 
         fetch("http://localhost:4000/addOrder", { 
             method: "POST",
@@ -68,7 +69,7 @@ const Orders = () => {
                                                     <input className="form-control" placeholder="Description" type="text" name="projectName" defaultValue={service.title} ref={register({ required: true })} />
                                                     {errors.projectName && <span>project Name is required</span>} 
                                                     <textarea rows="3" className="form-control" placeholder="Project Details" type="text" name="description" defaultValue={service.description} ref={register({ required: true })} />
-                                                    {errors.description && <span>Description is required</span>}                                             
+                                                    {errors.description && <span>Description is required</span>}
                                                     <div className="row">
                                                         <div className="col-md-6">
                                                             <input className="form-control" placeholder="Price" type="text" name="price" ref={register({ required: true })} />
