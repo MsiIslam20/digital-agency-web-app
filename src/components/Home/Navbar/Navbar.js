@@ -33,19 +33,19 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">                    
                         <ul className="navbar-nav ml-auto">                           
                             <li className="nav-item">
-                                <a className="nav-link" href="#0">Home</a>
+                                <Link to="/"className="nav-link">Home</Link>
                             </li>    
                             <li className="nav-item">
-                                <a className="nav-link" href="#0">Our Portfolio</a>
+                                <a className="nav-link" href="#portfolio">Our Portfolio</a>
                             </li> 
                             <li className="nav-item">
-                                <a className="nav-link" href="#0">Our Team</a>
+                                <a className="nav-link" href="#review">Our Team</a>
                             </li>  
                             {
                                 isDoctor ? <li className="nav-item">
                                     <Link to="/allService" className="nav-link btn btn-primary btn-brand">Admin Panel</Link>
                                 </li>  : <li className="nav-item">
-                                    <a className="nav-link" href="#0">Contact Us</a>
+                                    <a className="nav-link" href="#contact">Contact Us</a>
                                 </li>
                             }     
                             <li className="nav-item">

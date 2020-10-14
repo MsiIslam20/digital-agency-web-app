@@ -17,14 +17,14 @@ const Review = () => {
     }, [])
 
     return (
-        <section className="review-wrapper section-padding pt-0">
+        <section className="review-wrapper section-padding pt-0" id="review">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <h1 className="title">Clients <span>Feedback</span></h1>
                     </div>
                     {
-                        review.map(review => <SingleReview review={review} key={review.key}></SingleReview>)
+                        review.map(review => <SingleReview review={review} key={review._id}></SingleReview>)
                     }
                 </div>
             </div>

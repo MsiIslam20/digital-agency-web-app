@@ -26,7 +26,7 @@ const responsive = {
 
 const OurWorks = () => {
     return (
-        <section className="works-wrapper section-padding">
+        <section className="works-wrapper section-padding" id="portfolio">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
@@ -34,45 +34,45 @@ const OurWorks = () => {
                     </div>
                     <div className="col-md-12">
                         <div className="carousel-inner">
-                        <Carousel
-                          swipeable={false}
-                          draggable={false}
-                          showDots={true}
-                          responsive={responsive}
-                          ssr={true} // means to render carousel on server-side.
-                          infinite={true}
-                          customTransition="all .5s"
-                          transitionDuration={1000}
-                          containerClass="carousel-container"
-                          removeArrowOnDeviceType={["tablet", "mobile"]}
-                          dotListClass="custom-dot-list-style"
-                          itemClass="carousel-item-padding-40-px"
-                         responsive={responsive}>
-                            <div>
-                                <img src={carousel1} alt="" className="img-fluid"/>
-                            </div>
-                            <div>
-                                <img src={carousel2} alt="" className="img-fluid"/>
-                            </div>
-                            <div>
-                                <img src={carousel3} alt="" className="img-fluid"/>
-                            </div>
-                            <div>
-                                <img src={carousel1} alt="" className="img-fluid"/>
-                            </div>
-                            <div>
-                                <img src={carousel2} alt="" className="img-fluid"/>
-                            </div>
-                            <div>
-                                <img src={carousel3} alt="" className="img-fluid"/>
-                            </div>  
-                            <div>
-                                <img src={carousel2} alt="" className="img-fluid"/>
-                            </div>
-                            <div>
-                                <img src={carousel3} alt="" className="img-fluid"/>
-                            </div>                                                      
-                        </Carousel>;                            
+                            <Carousel
+                            swipeable={false}
+                            draggable={false}
+                            showDots={true}
+                            responsive={responsive}
+                            ssr={true} // means to render carousel on server-side.
+                            infinite={true}
+                            customTransition="all .5s"
+                            transitionDuration={1000}
+                            containerClass="carousel-container"
+                            removeArrowOnDeviceType={["tablet", "mobile"]}
+                            dotListClass="custom-dot-list-style"
+                            itemClass="carousel-item-padding-40-px"
+                            responsive={responsive}>
+                                <div>
+                                    <img src={carousel1} alt="" className="img-fluid"/>
+                                </div>
+                                <div>
+                                    <img src={carousel2} alt="" className="img-fluid"/>
+                                </div>
+                                <div>
+                                    <img src={carousel3} alt="" className="img-fluid"/>
+                                </div>
+                                <div>
+                                    <img src={carousel1} alt="" className="img-fluid"/>
+                                </div>
+                                <div>
+                                    <img src={carousel2} alt="" className="img-fluid"/>
+                                </div>
+                                <div>
+                                    <img src={carousel3} alt="" className="img-fluid"/>
+                                </div>  
+                                <div>
+                                    <img src={carousel2} alt="" className="img-fluid"/>
+                                </div>
+                                <div>
+                                    <img src={carousel3} alt="" className="img-fluid"/>
+                                </div>                                                      
+                            </Carousel>                          
                         </div>
                     </div>
                 </div>

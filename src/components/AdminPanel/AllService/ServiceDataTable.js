@@ -14,7 +14,7 @@ const ServiceDataTable = ({allOrders}) => {
             </thead>
             <tbody>
                 {
-                  allOrders.map((order) => 
+                  allOrders.map(order => 
                         
                     <tr>
                         <td>{order.name}</td>

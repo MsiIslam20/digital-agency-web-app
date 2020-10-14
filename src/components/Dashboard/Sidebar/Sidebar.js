@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIdBadge,  faPlus , faUser, faComment } from '@fortawesome/free-solid-svg-icons';
 import { UserContext } from '../../../App';
 import logo from '../../../images/logo.svg';
 
@@ -33,20 +35,20 @@ const Sidebar = () => {
                     {
                         isDoctor ?<div>
                             <li>
-                                <Link to="/allService">Service list</Link>
+                                <Link to="/allService"><FontAwesomeIcon icon={faIdBadge} /> Service list</Link>
                             </li>
                             <li>
-                                <Link to="/addService">Add Service</Link>
+                                <Link to="/addService"><FontAwesomeIcon icon={faPlus} /> Add Service</Link>
                             </li> 
                             <li>
-                                <Link to="/makeAdmin">Make Admin</Link>
+                                <Link to="/makeAdmin"><FontAwesomeIcon icon={faUser} /> Make Admin</Link>
                             </li>
                         </div> : <div>
                             <li>
-                                <Link to="/serviceList">Service list</Link>
+                                <Link to="/serviceList"><FontAwesomeIcon icon={faIdBadge} /> Service list</Link>
                             </li>
                             <li>
-                                <Link to="/reviews">Review</Link>
+                                <Link to="/reviews"><FontAwesomeIcon icon={faComment} /> Review</Link>
                             </li>
                         </div>
                     }

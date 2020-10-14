@@ -28,7 +28,7 @@ const AllService = () => {
                                        <li>{loggedInUser.name}</li>
                                    </ul>
                                    <div className="order-form">
-                                       <ServiceDataTable allOrders={allOrders}></ServiceDataTable>
+                                       <ServiceDataTable allOrders={allOrders} key={allOrders._id}></ServiceDataTable>
                                    </div>
                                </div>
                            </div>

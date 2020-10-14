@@ -24,7 +24,7 @@ const Services = () => {
                         <div className="service-inner">
                             <div className="row">
                                 {
-                                    services.map(service => <SingleService service={service} key={service.key}></SingleService>)
+                                    services.map(service => <SingleService service={service} key={service._id}></SingleService>)
                                 }
                             </div>
                         </div>
