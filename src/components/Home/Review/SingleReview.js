@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleReview = ({review}) => {
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 col-sm-6">
             <div className="review-inner">
                 <div className="d-flex">
                     <img src={review.img} alt="" className="img-fluid"/>

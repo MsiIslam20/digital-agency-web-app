@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SingleService = ({service}) => {
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 col-sm-6">
             <Link to={`/orders/${service._id}`}>
                 <div className="service-details text-center">
                     <img src={`http://localhost:4000/${service.img}`} alt="" className="img-fluid"/>
