@@ -26,7 +26,7 @@ const AddService = () => {
         formData.append('title', info.title);
         formData.append('description', info.description);
 
-        fetch('http://localhost:4000/addService', {
+        fetch('https://desolate-falls-67613.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

@@ -10,7 +10,7 @@ const AllService = () => {
     const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/allOrders')
+        fetch('https://desolate-falls-67613.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, []);

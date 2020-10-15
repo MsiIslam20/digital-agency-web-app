@@ -11,7 +11,7 @@ const Reviews = () => {
     const onSubmit = userData => {
         const img = loggedInUser.img;
         const reviewDetail = {img , ...userData};
-        fetch("http://localhost:4000/addReview", { 
+        fetch("https://desolate-falls-67613.herokuapp.com/addReview", { 
             method: "POST",
             headers: {
               'Content-Type': 'application/json'

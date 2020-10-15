@@ -4,7 +4,7 @@ const ServiceDataTable = ({allOrders}) => {
 
     const handleStatusChange = (e, id) => {
         const status = e.target.value;
-        fetch("http://localhost:4000/update/"+id, {
+        fetch("https://desolate-falls-67613.herokuapp.com/update/"+id, {
             method: "PATCH",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({status})

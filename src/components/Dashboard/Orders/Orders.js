@@ -13,7 +13,7 @@ const Orders = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:4000/orders/"+ id)
+        fetch("https://desolate-falls-67613.herokuapp.com/orders/"+ id)
         .then(res => res.json())
         .then(data => {
             setService(data);
@@ -29,7 +29,7 @@ const Orders = () => {
         const {img} = {...service}
         const orderDetail = {img , ...userData, status};
 
-        fetch("http://localhost:4000/addOrder", { 
+        fetch("https://desolate-falls-67613.herokuapp.com/addOrder", { 
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
@@ -74,10 +74,10 @@ const Orders = () => {
                                                             <input className="form-control" placeholder="Price" type="text" name="price" ref={register({ required: true })} />
                                                             {errors.price && <span>Price is required</span>}
                                                         </div>
-                                                        {/* <div className="col-md-6">
-                                                            <input className="form-control" placeholder="Organize books at the library." type="text" name="vnName" ref={register({ required: true })} />
-                                                            {errors.vnName && <span>Volunteer name is required</span>}
-                                                        </div> */}
+                                                        <div className="col-md-6">
+                                                            <input className="form-control" type="file" name="image" id="icon" ref={register({ required: true })} />
+                                                            {errors.image && <span>Project File is required</span>}
+                                                        </div>
                                                     </div>
                                                     <input type="submit" className="btn btn-primary register-btn btn-brand" value="Send"/>
                                                 </form>

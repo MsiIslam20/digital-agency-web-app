@@ -15,7 +15,7 @@ const MakeAdmin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("http://localhost:4000/makeAdmin", { 
+        fetch("https://desolate-falls-67613.herokuapp.com/makeAdmin", { 
             method: "POST",
             headers: {
               'Content-Type': 'application/json'

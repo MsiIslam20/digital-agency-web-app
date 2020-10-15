@@ -6,7 +6,7 @@ const SingleService = ({service}) => {
         <div className="col-md-4 col-sm-6">
             <Link to={`/orders/${service._id}`}>
                 <div className="service-details text-center">
-                    <img src={`http://localhost:4000/${service.img}`} alt="" className="img-fluid"/>
+                    <img src={`https://desolate-falls-67613.herokuapp.com/${service.img}`} alt="" className="img-fluid"/>
                     <h4>{service.title}</h4>
                     <p>{service.description}</p>
                 </div>
