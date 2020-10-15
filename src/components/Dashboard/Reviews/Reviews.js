@@ -7,8 +7,6 @@ const Reviews = () => {
 
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
-
-    console.log(loggedInUser);
   
     const onSubmit = userData => {
         const img = loggedInUser.img;
@@ -23,7 +21,6 @@ const Reviews = () => {
           .then(res => res.json())
           .then(data =>{
             if(data){
-                // history.push("/serviceList")
                 alert("Review Added Successfully!!!!!")
             }
         })

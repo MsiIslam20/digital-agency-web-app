@@ -7,7 +7,6 @@ import SingleServiceList from './SingleServiceList';
 const ServiceList = () => {
 
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
-
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
@@ -16,9 +15,7 @@ const ServiceList = () => {
         .then(data => {
             setOrders(data)
         })
-    }, [])
-
-    console.log(orders);
+    }, []);
 
     return (
         <section className="order-wrapper hidden">

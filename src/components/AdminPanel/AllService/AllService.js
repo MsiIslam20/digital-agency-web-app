@@ -5,6 +5,7 @@ import ServiceDataTable from './ServiceDataTable';
 import './AllService.css'
 
 const AllService = () => {
+
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     const [allOrders, setAllOrders] = useState([]);
 
@@ -12,7 +13,7 @@ const AllService = () => {
         fetch('http://localhost:4000/allOrders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
-    }, [])
+    }, []);
 
     return (
         <section className="order-wrapper hidden">

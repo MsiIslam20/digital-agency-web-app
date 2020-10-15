@@ -3,6 +3,7 @@ import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 
 const MakeAdmin = () => {
+
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     const [email, setEmail] = useState({});
 
@@ -11,7 +12,6 @@ const MakeAdmin = () => {
         newEmail[e.target.name] = e.target.value;
         setEmail(newEmail);
     }
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,7 +25,6 @@ const MakeAdmin = () => {
           .then(res => res.json())
           .then(data =>{
             if(data){
-                // history.push("/serviceList")
                 alert("Admin Added Successfully!!!!!")
             }
         })

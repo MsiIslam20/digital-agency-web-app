@@ -25,7 +25,6 @@ const Orders = () => {
     const history = useHistory();
 
     const onSubmit = userData => {
-
         const status = "pending"
         const {img} = {...service}
         const orderDetail = {img , ...userData, status};

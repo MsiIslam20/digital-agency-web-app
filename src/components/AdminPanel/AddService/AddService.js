@@ -4,8 +4,8 @@ import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import './AddService.css'
 
 const AddService = () => {
+    
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
 

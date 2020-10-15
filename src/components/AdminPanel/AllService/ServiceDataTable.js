@@ -3,7 +3,6 @@ import React from 'react';
 const ServiceDataTable = ({allOrders}) => {
 
     const handleStatusChange = (e, id) => {
-
         const status = e.target.value;
         fetch("http://localhost:4000/update/"+id, {
             method: "PATCH",
