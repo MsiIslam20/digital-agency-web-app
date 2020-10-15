@@ -7,7 +7,6 @@ import './Review.css'
 const Review = () => {
 
     const [review, setReview] = useState([]);
-
     useEffect(() => {
         fetch("http://localhost:4000/reviews")
         .then(res => res.json())
