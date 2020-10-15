@@ -20,7 +20,8 @@ const AddService = () => {
         setFile(newFile);
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const formData = new FormData()
         formData.append('file', file);
         formData.append('title', info.title);
