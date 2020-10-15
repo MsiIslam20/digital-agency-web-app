@@ -8,7 +8,7 @@ import logo from '../../../images/logo.svg';
 const Sidebar = () => {
 
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
-    const [isDoctor, setIsDoctor] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:4000/isAdmin', {
@@ -17,7 +17,7 @@ const Sidebar = () => {
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => setIsDoctor(data));
+            .then(data => setIsAdmin(data));
     }, []);
 
     return (
@@ -29,11 +29,8 @@ const Sidebar = () => {
                     </Link>
                 </div>
                 <ul className="list-unstyled">
-                    {/* <li>
-                        <Link to="/orders">Order</Link>
-                    </li> */}
                     {
-                        isDoctor ?<div>
+                        isAdmin ? <div>
                             <li>
                                 <Link to="/allService"><FontAwesomeIcon icon={faIdBadge} /> Service list</Link>
                             </li>
