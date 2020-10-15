@@ -33,7 +33,7 @@ const AddService = () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            alert("service added successfully...!!!!!")
         })
         .catch(error => {
             console.error(error)
